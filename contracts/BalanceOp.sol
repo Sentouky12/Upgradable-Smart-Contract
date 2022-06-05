@@ -21,7 +21,7 @@ contract BalanceOp is Storage{
   function getBalance(string memory name) public view returns(uint256) {
     return _uintStorage[name];
   }
-  function setBalance(string memory name,uint256 toSet) public {
+  function setBalance(string memory name,uint256 toSet) onlyOwner public {
     _uintStorage[name] = toSet;
   }
 
