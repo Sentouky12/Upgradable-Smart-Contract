@@ -3,7 +3,8 @@ pragma solidity 0.8.0;
 import "./Storage.sol";
 
 contract BalanceOp is Storage{
-
+// "Forgot to  add" initialize so we can upgrade
+// the smart contract later to fix it. 
   modifier onlyOwner() {
     require(msg.sender == owner);
     _;
